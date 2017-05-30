@@ -46,7 +46,7 @@ func (api BaiduApi) call (serviceName string, subService string, params map[stri
 		return err
 	}
 	body, err := ioutil.ReadAll(response.Body)
-	fmt.Println(string(body))
+	// fmt.Println(string(body))
 	// 解码过程，并检测相关可能存在的错误
 	if err := json.Unmarshal(body, &template); err != nil {
 		return err	
